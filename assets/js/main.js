@@ -8,7 +8,35 @@ function setConsole(value) {
     $("#console").html(value);
 }
 
+
 $(function () {
+    function calculate(existingValue, newValue, action) {
+    var calculatedValue = existingValue;
+    
+    if (!isNaN(newValue)) {
+        if (action === "add") {
+            calculatedValue = existingValue + newValue;
+        }
+        else if (action === "sub") {
+            calculatedValue = existingValue - newValue;
+        }
+        
+        if (existingValue !== 0) {
+            if (action === "times") {
+                calculatedValue = existingValue * newValue;
+            }
+            else if (action === "divide") {
+                calculatedValue = existingValue / newValue;
+            }
+        }
+        else {
+            calculatedValue = newValue;
+        }
+    }
+    
+    return calculatedValue;
+}
+    
     $(".number").click(function() {
         currentNumber += $(this).val();
         setConsole(currentNumber);
