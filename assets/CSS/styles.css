@@ -1,0 +1,24 @@
+body {
+    background-image: url(../imgs/party.jpg);
+    color: #5D5F60;
+    font -weight: 200;
+}
+
+button {
+    padding: 20px 0;
+    background-color: transparent;
+    outline: #fff;
+}
+
+.console {
+    background-color: #333333;
+    color: #e5e5e5;
+    font-family: monospace;
+    padding: 20px 10px;
+    text-align: right;
+}
+
+.image {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
